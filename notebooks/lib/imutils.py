@@ -1,5 +1,6 @@
 import numpy as np
 import cv2
+import matplotlib.pyplot as plt
 
 def translate(image, x, y):
     M = np.float32([[1, 0, x], [0, 1, y]])
@@ -33,3 +34,8 @@ def resize(image, width = None, height = None, inter = cv2.INTER_AREA):
 
     resized = cv2.resize(image, dim, interpolation = inter)
     return resized
+
+def draw(image):
+    plt.axis("off")
+    plt.imshow(cv2.cvtColor(image, cv2.COLOR_BGR2RGB))
+    plt.show()
