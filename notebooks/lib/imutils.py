@@ -35,7 +35,8 @@ def resize(image, width = None, height = None, inter = cv2.INTER_AREA):
     resized = cv2.resize(image, dim, interpolation = inter)
     return resized
 
-def draw(image, reverse = False):
+def draw(title, image, reverse = False):
+    plt.title(title)
     plt.axis("off")
     if reverse == True:
         plt.imshow(cv2.cvtColor(image, cv2.COLOR_BGR2RGB))
