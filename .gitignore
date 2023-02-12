@@ -3,6 +3,7 @@ notebooks/cifar_net.pth
 .ipynb_checkpoints/
 .devcontainer/
 .vscode/
+.DS_Store
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
